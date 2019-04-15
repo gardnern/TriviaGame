@@ -7,15 +7,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="./asset/css/style.css">
+        <link img="background" src="./asset/images/background2.jpg">
+               
   </head>
   <body>
-    <div id = "wrapper">
-      <h1>Dog Trivia</h1>
-          <div>
-              <p>Time left:</p>
-              <span id='seconds'>30</span>
-          </div>
+     
+    <div id = "container"></div>
+    <img src="./asset/images/background2.jpg" class="auth-image2" alt="puppies">
+    <h1>Dog Trivia</h1>
     </div>    
+    <div class = "sidenav">
+        <div>
+            <h3>Time left:</h3>
+            <span id='seconds'>120</span>
+        </div>
+        <div id="results"></div> 
+    </div>
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -25,7 +32,7 @@
             <h2>Welcome to Dog Trivia!</h2>
           </div>
           <div class="modal-body">
-            <p>You have 30 seconds to answer the questions.</p>
+            <p>You have 120 seconds to answer the questions.</p>
             <p>Click Start to begin!</p>
             <button id = "start">Start</button>
            
@@ -36,76 +43,12 @@
         </div>
       
       </div>
-      
-              
-            <div>
-              <h4>Which dog breed is the favourite of The Queen of England?</h4>
-                    <input type="radio" name="q1" value="chowChow">ChowChow<br>
-                    <input type="radio" name="q1" value="corgi">Corgi<br>
-                    <input type="radio" name="q1" value="poodle">Poodle<br>
+            <div class = "triviaContainer"> 
+            <div id="dogTrivia"></div>
             </div>
-            <div>
-              <h4>Which breed of dog has a black tongue?</h4>
-                    <input type="radio" name="q2" value="beagle">Beagle<br>
-                    <input type="radio" name="q2" value="chowChow">ChowChow<br>
-                    <input type="radio" name="q2" value="chihuahua">chihuahua<br>
-            </div>
-            <div>
-              <h4>Dogs have 3 eyelids, True or False?</h4>
-                    <input type="radio" name="q3" value="true">True<br>
-                    <input type="radio" name="q3" value="false">False<br>
-                    
-            </div>
-            <div>
-              <h4>What breed is Scooby Doo?</h4>
-                        <input type="radio" name="q4" value="border-collie">Border Collie<br>
-                        <input type="radio" name="q4" value="mastiff">Mastiff<br>
-                        <input type="radio" name="q4" value="great-dane">Great Dane<br>
-            </div>
-            <div>
-              <h4>I am a Saint Bernard named after a composer. What is my name?</h4>
-                            <input type="radio" name="q5" value="beethoven">Beethoven<br>
-                            <input type="radio" name="q5" value="elvis">Elvis<br>
-                            <input type="radio" name="q5" value="beatles">Beatles<br>
-            </div>
-            <div>
-              <h4>What breed of dog is Snoopy?</h4>
-                                <input type="radio" name="q6" value="beagle">Beagle<br>
-                                <input type="radio" name="q6" value="mutt">Mutt<br>
-                                <input type="radio" name="q6" value="pug">Pug<br>
-            </div>
-                <input id='submitButton' type='submit' />
-       
-                  <!-- Fourth card: Holds the number of Wins. -->
-                  <div class="card card-default">
-
-                      <div class="card-body">
-          
-                        <!-- This span called win-counter is where we"ll be dumping the number of wins. Pay attention to the id called ****win-counter*** we"ll be referencing this in the JavaScript. -->
-                      <strong>Correct Answers: </strong> <span id="correctCounter">0</span>
-          
-                      </div>
-          
-               </div>
-        </div>
-               <!-- Fifth card: Holds the number of Losses. -->
-               <div class="card card-default">
-                      <div class="card-body">
-          
-                        <!-- This span called loss-counter is where we"ll be dumping the number of losses. Pay attention to the id called ****loss-counter***; we"ll be referencing this in the JavaScript. -->
-                      <strong>Wrong Answers: </strong> <span id="wrongCounter">0</span>
-          
-                      </div>
-               </div>
-               <div class="card card-default">
-                  <div class="card-body">
-      
-                    <!-- This span called loss-counter is where we"ll be dumping the number of losses. Pay attention to the id called ****loss-counter***; we"ll be referencing this in the JavaScript. -->
-                  <strong>Unanswered: </strong> <span id="unansweredCounter">0</span>
-      
-                  </div>
-               </div>
-   
+            <!-- <button id="previous">Previous Question</button>
+            <button id="next">Next Question</button> -->
+            <button id="submit">Submit</button>
       
         <script src="./asset/javascript/app.js"></script>
     </body>
